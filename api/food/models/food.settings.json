@@ -1,0 +1,19 @@
+{
+  "info": {
+    "name": "food"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "price": {
+      "type": "integer"
+    }
+  },
+  "connection": "default",
+  "collectionName": "foods"
+}
