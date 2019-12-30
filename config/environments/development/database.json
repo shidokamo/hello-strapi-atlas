@@ -4,15 +4,10 @@
     "default": {
       "connector": "mongoose",
       "settings": {
-        "database": "hello-strapi-mongo",
-        "host": "127.0.0.1",
-        "srv": false,
-        "port": 27017,
-        "username": "",
-        "password": ""
+        "uri": "${process.env.DATABASE_URI || ''}"
       },
       "options": {
-        "authenticationDatabase": ""
+        "ssl": true
       }
     }
   }
