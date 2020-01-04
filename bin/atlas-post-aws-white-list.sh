@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Add Heroku AWS EC2 ip rage to white list
 for region in "us-east-1" "us-west-2"; do
   req_array=$(
     wget -O - https://ip-ranges.amazonaws.com/ip-ranges.json \
