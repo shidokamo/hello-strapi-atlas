@@ -8,6 +8,9 @@ for region in "us-east-1" "us-west-2"; do
       '.prefixes[] | select(.region==$region) | select(.service=="EC2") | {cidrBlock: .ip_prefix, comment: "AWS EC2"}' \
     |jq -s '.'
   )
+  # Debug
+  echo $req_array
+  # exit
   curl --user "${ATLAS_PUBLIC_KEY}:${ATLAS_PRIVATE_KEY}" --digest --include \
        --header "Accept: application/json" \
        --header "Content-Type: application/json" \
