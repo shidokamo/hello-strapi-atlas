@@ -7,6 +7,8 @@
     "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",
+    "gcp-build": "npm run build",
+    "gcp-deploy": "gcloud app deploy",
     "strapi": "strapi"
   },
   "devDependencies": {},
