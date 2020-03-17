@@ -1,7 +1,8 @@
 # Hello Strapi (MongoDB Atlas)
-Strapi をローカルでテストし、Heroku にデプロイするサンプルです。
+Strapi をローカルでテストし、Heroku もしくは GAE にデプロイするサンプルです。
 
 * 事前に MongoDB Atlas でクラスタを作成してください
+* デプロイ前にローカル環境から、データのスキーマを作成する必要があります。
 
 ## ローカルでのテスト
 ```
@@ -64,6 +65,16 @@ export ATLAS_PROJECT_ID=05in48cnc85n89575n985n8r
 ./bin/atlas-post-gae-white-list.sh
 ```
 
+以下のコマンドでデプロイできます。
 
+```
+npm run gcp-build
+npm run gcp-deploy
+```
 
+エンドポイント等は以下のコマンドで表示できます。
+
+```
+gcloud app describe
+```
 
